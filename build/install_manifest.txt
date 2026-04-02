@@ -1,4 +1,5 @@
 /firmware/blink.uf2
 /firmware/log.uf2
 /firmware/btn.uf2
+/firmware/interrupt.uf2
 /firmware/watchdog.uf2
