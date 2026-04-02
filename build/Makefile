@@ -175,32 +175,6 @@ bs2_default/fast:
 .PHONY : bs2_default/fast
 
 #=============================================================================
-# Target rules for targets named picotoolForceReconfigure
-
-# Build rule for target.
-picotoolForceReconfigure: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 picotoolForceReconfigure
-.PHONY : picotoolForceReconfigure
-
-# fast build rule for target.
-picotoolForceReconfigure/fast:
-	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2350/boot_stage2/CMakeFiles/picotoolForceReconfigure.dir/build.make pico-sdk/src/rp2350/boot_stage2/CMakeFiles/picotoolForceReconfigure.dir/build
-.PHONY : picotoolForceReconfigure/fast
-
-#=============================================================================
-# Target rules for targets named picotoolBuild
-
-# Build rule for target.
-picotoolBuild: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 picotoolBuild
-.PHONY : picotoolBuild
-
-# fast build rule for target.
-picotoolBuild/fast:
-	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2350/boot_stage2/CMakeFiles/picotoolBuild.dir/build.make pico-sdk/src/rp2350/boot_stage2/CMakeFiles/picotoolBuild.dir/build
-.PHONY : picotoolBuild/fast
-
-#=============================================================================
 # Target rules for targets named bs2_default_bin
 
 # Build rule for target.
@@ -225,19 +199,6 @@ bs2_default_library: cmake_check_build_system
 bs2_default_library/fast:
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default_library.dir/build.make pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default_library.dir/build
 .PHONY : bs2_default_library/fast
-
-#=============================================================================
-# Target rules for targets named pioasmBuild
-
-# Build rule for target.
-pioasmBuild: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pioasmBuild
-.PHONY : pioasmBuild
-
-# fast build rule for target.
-pioasmBuild/fast:
-	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/pioasmBuild.dir/build.make pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/pioasmBuild.dir/build
-.PHONY : pioasmBuild/fast
 
 #=============================================================================
 # Target rules for targets named cyw43_driver_picow_cyw43_bus_pio_spi_pio_h
@@ -291,6 +252,32 @@ log/fast:
 	$(MAKE) $(MAKESILENT) -f log/CMakeFiles/log.dir/build.make log/CMakeFiles/log.dir/build
 .PHONY : log/fast
 
+#=============================================================================
+# Target rules for targets named btn
+
+# Build rule for target.
+btn: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 btn
+.PHONY : btn
+
+# fast build rule for target.
+btn/fast:
+	$(MAKE) $(MAKESILENT) -f btn/CMakeFiles/btn.dir/build.make btn/CMakeFiles/btn.dir/build
+.PHONY : btn/fast
+
+#=============================================================================
+# Target rules for targets named watchdog
+
+# Build rule for target.
+watchdog: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 watchdog
+.PHONY : watchdog
+
+# fast build rule for target.
+watchdog/fast:
+	$(MAKE) $(MAKESILENT) -f watchdog/CMakeFiles/watchdog.dir/build.make watchdog/CMakeFiles/watchdog.dir/build
+.PHONY : watchdog/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -306,13 +293,12 @@ help:
 	@echo "... bs2_default_bin"
 	@echo "... cyw43_driver_picow_cyw43_bus_pio_spi_pio_h"
 	@echo "... pico_status_led_ws2812_pio_h"
-	@echo "... picotoolBuild"
-	@echo "... picotoolForceReconfigure"
-	@echo "... pioasmBuild"
 	@echo "... blink"
 	@echo "... bs2_default"
 	@echo "... bs2_default_library"
+	@echo "... btn"
 	@echo "... log"
+	@echo "... watchdog"
 .PHONY : help
 
 
